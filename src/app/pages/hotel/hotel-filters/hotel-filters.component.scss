@@ -1,0 +1,18 @@
+@import './../../../../assets/styles/variables';
+
+.filter-title {
+    color: $blue-ligth;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    width: 100%;
+    > .icon-arrow-down, .icon-arrow-up { font-size: 20px; }
+}
+.star-filter {
+    font-size: 12px;
+    font-weight: 700;
+    > .list-group-item {
+        border: 0;
+        padding: .3rem 1.25rem;
+    }
+}

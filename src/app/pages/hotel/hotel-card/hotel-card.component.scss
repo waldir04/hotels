@@ -1,0 +1,42 @@
+@import './../../../../assets/styles/variables';
+
+.hotels-list {
+    @media screen and (min-width: 768px) {
+        padding-left: 0;
+    }
+}
+.hotel-card {
+    .photo {
+        height: 100%;
+        width: 100%;
+    }
+    > .card-body {
+        p { font-size: 12px; }
+    }
+    .hotel-info {
+        h6 {
+            color: $blue-ligth;
+            font-weight: 700;
+        }
+        @media screen and (max-width: 767px) {
+            padding: 1rem;
+        }
+    }
+    .hotel-price {
+        border-left: 1px dotted $gray;
+        @media screen and (max-width: 767px) {
+            border-left: 0;
+            border-top: 1px dotted $gray;
+            padding: 1rem !important;
+        }
+    }
+    .price {
+        color: $orange;
+        font-weight: 700;
+        letter-spacing: -1px;
+        > span {
+            font-size: 1.7rem;
+            font-weight: normal;
+        }
+    }
+}

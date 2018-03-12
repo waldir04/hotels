@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col mb-3">
+            <app-hotel-filters [filters]="filters" (filtersChange)="filter()"></app-hotel-filters>
+        </div>
+        <div class="col-sm-12 col-md-9 hotels-list">
+            <div class="row">
+                <div class="col">
+                    <ng-container *ngFor="let hotel of hotels">
+                        <app-hotel-card [data]="hotel" (hotelSelected)="showHotel($event)"></app-hotel-card>
+                    </ng-container>
+                    <div class="card">
+                        <div class="card-body text-center" *ngIf="hotels.length === 0">
+                            <h4>No se encontraron resultado, intente otros filtros de búsqueda.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

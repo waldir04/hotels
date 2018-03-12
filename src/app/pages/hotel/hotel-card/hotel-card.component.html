@@ -1,0 +1,32 @@
+<div class="card hotel-card mb-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <img class="img-fluid photo" [src]="getImageUrl(data.image)" alt="Hotel photo">
+            </div>
+            <div class="col-sm-12 col-md-5 hotel-info">
+                <div>
+                    <h6 class="mb-1">{{ data.name }}</h6>
+                </div>
+                <div>
+                    <i class="icon-star yellow" *ngFor="let i of ArrayType(data.stars).fill(1)"></i>
+                </div>
+                <div>
+                    <ng-container *ngFor="let icon of data.amenities">
+                        <i class="icon-{{ icon }}"></i>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3 text-center pt-5 pb-5 hotel-price">
+                <p class="mb-1">Precio por noche por habitación</p>
+                <h1 class="price">
+                    <span>ARS</span>
+                    {{ data.price }}
+                </h1>
+                <a class="btn btn-primary btn-lg btn-block" [routerLink]="['/hotels', {name: data.name}]" (click)="showHotel(data.name)">
+                    Ver hotel
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

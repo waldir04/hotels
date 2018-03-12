@@ -1,0 +1,28 @@
+@import 'variables';
+
+body {
+    background-color: $background-page;
+    height: 100%;
+    padding-top: 6rem;
+}
+
+.btn {
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: $blue;
+}
+
+.card {
+    border: 0;
+    border-radius: 0;
+    box-shadow: $box-shadow;
+    .card-body {
+        padding: .4rem .8rem;
+    }
+}
+
+.icon-star {
+    &.yellow { color: $yellow };
+}
